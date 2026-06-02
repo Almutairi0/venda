@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TODAY=$(date +%Y%m%d)
-
+NOW=$(date +%s)
 SecretUrl="Put your url here"
 
 curl -s $SecretUrl | awk -v today="$TODAY" -F ':' '
@@ -20,5 +20,16 @@ while IFS='|' read -r raw_start raw_end summary; do
 	local_start=$(date -d "${raw_start:9:2}:${raw_start:11:2} UTC" +"%H:%M")
 	local_end=$(date -d "${raw_end:9:2}:${raw_end:11:2} UTC" +"%H:%M")
 
-	echo "$local_start - $local_end | $summary"
+	start_seconds=$(date -d "${raw_start:9:2}:${raw_start:11:2} UTC" +"%s")
+	elapsed=$((start_seconds - NOW))
+	if [ $elapsed -lt 0 ]; then
+		continue
+	elif [ $elapsed -lt 3600 ]; then
+		echo -e "\e[31m$local_start - $local_end | $summary\e[0m"
+	elif [ $elapsed -lt 10800 ]; then
+		echo -e "\e[33m$local_start - $local_end | $summary\e[0m"
+	else
+		echo -e "\e[32m$local_start - $local_end | $summary\e[0m"
+fi
+
 done | sort
