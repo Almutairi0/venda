@@ -1,6 +1,6 @@
 # venda 
 
-A lightweight, dependency-free Bash script that fetches your Outlook calendar agenda, translates UTC time to your local timezone dynamically, and displays your day's schedule in chronological order right inside your terminal.
+A lightweight, dependency-free Bash script that fetches your Google calendar agenda, translates UTC time to your local timezone dynamically, and displays your day's schedule in chronological order right inside your terminal.
 
 Perfect for adding to your `~/.bashrc` or `~/.zshrc` so you can see your agenda every time you open a terminal window.
 
