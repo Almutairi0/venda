@@ -7,7 +7,7 @@ Perfect for adding to your `~/.bashrc` or `~/.zshrc` so you can see your agenda 
 ## Features
 * **Timezone Aware:** Automatically detects and converts Outlook's UTC storage format to your exact local system timezone.
 * **Chronologically Sorted:** Automatically lists morning meetings before afternoon tasks using native Linux sorting.
-* **Blazing Fast & Lightweight:** Uses native `curl`, `awk`, and `bash` string manipulation—no heavy OAuth dependencies, API keys, or bulky Python libraries required.
+* **Blazing Fast & Lightweight:** Uses native `curl`, `awk`, and `bash` string manipulation no heavy OAuth dependencies, API keys, or bulky Python libraries required.
 * **Zero Maintenance:** Runs entirely on standard Linux/POSIX utilities found on any distribution out of the box.
 
 ## How it Works Under the Hood
@@ -23,8 +23,8 @@ The script works in a 4-step pipeline:
 ## Installation
 
 ### 1. Get your Secret Google URL
-1. log into **[Google Calander] https://calendar.google.com/calendar**.
-2. Click the **Settings (Gear Icon)** in the top right corner.
+1. log into [Google Calander](https://calendar.google.com/calendar).
+2. Click the **Settings** in the top right corner.
 3. Click on your specific calander.
 4. Copy your private ICS link.
 
