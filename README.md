@@ -5,7 +5,7 @@ A lightweight, dependency-free Bash script that fetches your Google calendar age
 Perfect for adding to your `~/.bashrc` or `~/.zshrc` so you can see your agenda every time you open a terminal window.
 
 ## Features
-* **Timezone Aware:** Automatically detects and converts Outlook's UTC storage format to your exact local system timezone.
+* **Timezone Aware:** Automatically detects and converts Google UTC storage format to your exact local system timezone.
 * **Chronologically Sorted:** Automatically lists morning meetings before afternoon tasks using native Linux sorting.
 * **Blazing Fast & Lightweight:** Uses native `curl`, `awk`, and `bash` string manipulation no heavy OAuth dependencies, API keys, or bulky Python libraries required.
 * **Zero Maintenance:** Runs entirely on standard Linux/POSIX utilities found on any distribution out of the box.
