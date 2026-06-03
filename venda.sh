@@ -15,8 +15,8 @@ $1 ~ /SUMMARY/ && substr(start,1,8) == today {
 	print start "|" end "|" $2
 	
 }
-' |
-while IFS='|' read -r raw_start raw_end summary; do
+' | sort |
+	while IFS='|' read -r raw_start raw_end summary; do
 	local_start=$(date -d "${raw_start:9:2}:${raw_start:11:2} UTC" +"%H:%M")
 	local_end=$(date -d "${raw_end:9:2}:${raw_end:11:2} UTC" +"%H:%M")
 
@@ -32,4 +32,4 @@ while IFS='|' read -r raw_start raw_end summary; do
 		echo -e "\e[32m$local_start - $local_end | $summary\e[0m"
 fi
 
-done | sort
+done
