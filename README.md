@@ -4,6 +4,8 @@ A lightweight, dependency-free Bash script that fetches your Google calendar age
 
 Perfect for adding to your `~/.bashrc` or `~/.zshrc` so you can see your agenda every time you open a terminal window.
 
+![venda terminal output](assets/venda-output.png)
+
 ## Features
 * **Timezone Aware:** Automatically detects and converts Google UTC storage format to your exact local system timezone.
 * **Chronologically Sorted:** Automatically lists morning meetings before afternoon tasks using native Linux sorting.
